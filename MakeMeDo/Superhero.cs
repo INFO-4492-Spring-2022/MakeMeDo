@@ -30,5 +30,22 @@ namespace MakeMeDo {
             return "I hits the ground";
         }
 
+        public static Superhero operator +(Superhero h, Citizen c) {
+            // shallow copy
+            h.Identity = c.FirstName;
+            return h;
+        }
+
+        public static Superhero operator +( Citizen c , Superhero h) {
+            // deep copy -- cloning
+            Superhero newSup = new Superhero();
+            newSup.FirstName = h.FirstName;
+            newSup.LastName = h.LastName;
+            newSup.DateOfBirth = h.DateOfBirth;
+            newSup.FavoriteFood = h.FavoriteFood;
+            newSup.Identity = c.FirstName;
+
+            return newSup;
+        }
     }
 }

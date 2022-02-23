@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Broom.cs" />
     <Compile Include="IFlyable.cs" />
     <Compile Include="SpaceShip.cs" />
     <Compile Include="Superhero.cs" />
